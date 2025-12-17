@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;700&display=swap');
+
+:root{
+  --fg: #222;
+  --muted: #6b6b6b;
+  --blue: #0b5c83;
+  --orange: #f26a21;
+  --bg: #fff;
+}
+
+.approach-slide{
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Barlow Semi Condensed", system-ui, sans-serif;
+  padding: 52px 64px 40px 64px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.approach-slide .top{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 36px;
+}
+
+.brand-bars{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 8px;
+}
+.brand-bars span{
+  width: 34px;
+  height: 44px;
+  background: var(--blue);
+  display: inline-block;
+}
+.brand-bars span:nth-child(2){ width: 14px; }
+.brand-bars span:nth-child(3){ width: 6px; }
+
+.title{
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #666;
+}
+
+.main{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.right{
+  font-size: 34px;
+  color: var(--muted);
+}
+.right ul{ margin: 0; padding-left: 1.2em; }
+.right li{ margin: 14px 0; }
+
+.right .section{
+  color: var(--muted);
+  font-weight: 500;
+}
+.right .sub{
+  color: var(--muted);
+  font-weight: 400;
+}
+.right .accent{
+  color: var(--orange);
+  font-weight: 600;
+}
+
+.bottom{
+  position: absolute;
+  left: 64px;
+  right: 64px;
+  bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.callout{
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 14px 20px;
+  min-width: 520px;
+}
+.chevron{
+  width: 0; height: 0;
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;
+  border-left: 44px solid var(--orange);
+  margin-right: 18px;
+}
+.callout-text{
+  font-size: 30px;
+  color: #777;
+}
+.callout-text .accent{ color: var(--orange); font-weight: 700; }
+
+.pager{
+  font-size: 28px;
+  color: #777;
+}

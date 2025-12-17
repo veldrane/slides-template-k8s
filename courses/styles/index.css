@@ -1,0 +1,17 @@
+:root {
+  /* Primary palette */
+  --color-primary: #0b5c83;
+  --color-accent: #f2a65a;
+  --color-accent-soft: #e6c48f;
+
+  /* Neutrals */
+  --color-bg-light: #f2f4f6;
+  --color-text-dark: #1f2933;
+  --color-text-light: #fdfdfd;
+  --color-text-title: #666666;
+
+  /* Semantic (volitelné, ale doporučuju) */
+  --color-info: #6fa3a0;
+  --color-warning: #f2a65a;
+  --color-muted: #9aa5ad;
+}
