@@ -14,4 +14,8 @@
   --color-info: #6fa3a0;
   --color-warning: #f2a65a;
   --color-muted: #9aa5ad;
+
+  /* Inside elements */
+  --color-bg-soft: #eef4f8;
 }
+
