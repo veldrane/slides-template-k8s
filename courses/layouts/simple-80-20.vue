@@ -114,7 +114,7 @@
 }
 
 .left {
-  flex: 0 0 55%;
+  flex: 0 0 20%;
   color: var(--color-text-dark);
   padding: 20px 32px;
   box-sizing: border-box;
@@ -122,7 +122,7 @@
 
 .right {
   color: var(--color-text-dark);
-  flex: 0 0 45%;
+  flex: 0 0 80%;
   padding: 20px 32px;
   box-sizing: border-box;
 }
