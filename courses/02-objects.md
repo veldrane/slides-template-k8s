@@ -28,7 +28,7 @@ split: 55
 
 ::header::
 
-Objekt pod
+Co je Pod 
 
 ::left::
 
@@ -36,6 +36,7 @@ Objekt pod
 - Reprezentuje běžící aplikaci a její prostředí
 - Obsahuje jeden nebo více kontejnerů
 - Běží na jedno konkreétním nodu
+- Je stateless
 - V k8s síti má unikátní ip adressu 
   - v případě použití deploymentu i hostname
 
@@ -126,8 +127,8 @@ simple-api-pod   1/1     Running   0          52m   10.38.4.6   wks-220a66-00004
 
 ---
 layout: twist
-twistAt: 4
-clicks: 4
+twistAt: 5
+clicks: 5
 ---
 
 ::header::
@@ -136,7 +137,7 @@ Pod: pokračování
 
 ::left::
 
-<div class="note" v-if="$slidev.nav.clicks < 5">
+<div class="note" v-if="$slidev.nav.clicks < 6">
 
 ```mermaid { scale: 0.8 }
 %%{init: {
@@ -173,41 +174,52 @@ columns 1
 
 <div class="note" v-if="$slidev.nav.clicks === 1">
 
-- Interně Pod reprezentuje linux namespace
+- Interně Pod reprezentuje container prostředí
+  - linux namespaces
+  - cgroups
+  - rootfs je container image
 
 </div>
 
 <div class="note" v-else-if="$slidev.nav.clicks === 2">
 
-- Interně Pod reprezentuje linux namespace
-- lze však definovat pouze jeden 
-  - žádná vysoká dostupnost
+- Interně Pod reprezentuje container prostředí
+  - linux namespaces
+  - cgroups
+  - rootfs je container image
+- Containery jsou běžící aplikace v tomto prostředí
 
 </div>
 
 <div class="note" v-else-if="$slidev.nav.clicks === 3">
 
-- Interně Pod reprezentuje linux namespace
-- lze však definovat pouze jeden 
+- Interně Pod reprezentuje container prostředí
+  - linux namespaces
+  - cgroups
+  - rootfs je container image
+- Containery jsou běžící aplikace v tomto prostředí
+- Lze však definovat pouze jeden 
   - žádná vysoká dostupnost
-- potřebujeme tedy objekt který "vyrobí" více Podů
 
 </div>
 
 <div class="note" v-else-if="$slidev.nav.clicks === 4">
 
-- Interně Pod reprezentuje linux namespace
-- lze však definovat pouze jeden 
-  - žádná vysoká dostupnost
-- potřebujeme tedy objekt který "vyrobí" více Podů
+- Potřebujeme tedy objekt který "vyrobí" více Podů
+
+</div>
+
+<div class="note" v-else-if="$slidev.nav.clicks === 5">
+
+- Potřebujeme tedy objekt který "vyrobí" více Podů
 
 </div>
 
 ::twist::
 
-<div class="note" v-if="$slidev.nav.clicks === 4">
+<div class="note" v-if="$slidev.nav.clicks === 5">
 
-Deployment!
+Deployment !
 
 </div>
 
