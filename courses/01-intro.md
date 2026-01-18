@@ -31,9 +31,9 @@ Co jsou kontejnery
 
 ::left::
 
-- kontejner je izolovaný linuxový process
-- není to VM!
-- běží v kontextu operačního systému
+- Kontejner je izolovaný linuxový process
+- Není to VM!
+- Běží v kontextu operačního systému
     - jeho scheduleru
     - využíva jeho zdroje
 
@@ -71,6 +71,7 @@ columns 1
   style A fill: var(--color-accent)
   style C fill: var(--color-accent)
 ```
+
 ---
 layout: simple
 ---
@@ -81,9 +82,9 @@ Filosofie
 
 ::left::
 
-- kontejner je process uzavřený v tzv. namespacech
-- je spouštěn z tzv. image
-- "vidí" omezené zdroje 
+- Kontejner je process uzavřený v tzv. namespacech
+- Je spouštěn z tzv. image
+- "Vidí" omezené zdroje 
     - síťové interface
     - vlastní mountpointy
     - ipc, time domain, atd, apod
@@ -125,14 +126,6 @@ Linux namespaces
       icon: 'streamline-sharp:reset-clock',
       text: 'Time'
     },
-    {
-      icon: 'streamline-sharp:bullet-list',
-      text: 'Cgroup'
-    },
-    {
-      icon: 'streamline-sharp:layers-1',
-      text: 'UTS'
-    }
   ]"
 />
 
@@ -143,6 +136,7 @@ twistAt: 5
 
 ::header::
 
+Co je manifest
 Co je manifest
 
 ::left::
@@ -170,7 +164,7 @@ spec:
 
 ##### ApiVersion a Kind:
 
-- apiVersion: verze v rámci api
+- apiVersion: verze API skupiny pro daný typ objektu
 - Kind: typ objektu
   - Pod
   - Deployment
@@ -194,7 +188,7 @@ spec:
 
 - key/val hodnota
 - Labels se častó používají v rámci tzv. selectorů
-- Annotations jsou doplňkové informace které mohou měnit konfiguraci controllerů
+- Mohou nést doplňkovou konfiguraci / metadata pro nástroje a controllery
 </div>
 
 
@@ -253,7 +247,7 @@ Workflow
 
 stateDiagram-v2
     manifest: Manifest
-    manifest --> k8s: PUT
+    manifest --> k8s: Apply (HTTP request)
     k8s: Kubernetes API
     k8s --> Controller: watch event
     state Controller {
@@ -266,3 +260,4 @@ stateDiagram-v2
     }
     Controller --> Object
 ```
+
