@@ -1,1 +1,1 @@
-./02-objects.md
+./../../../csob/kubernetes-core/slides/02-basic.md
